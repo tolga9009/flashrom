@@ -154,7 +154,7 @@ static void determine_generation(struct pci_dev *dev)
 		if (rev == 0x4a) {
 			amd_gen = CHIPSET_YANGTZE;
 			msg_pdbg("Yangtze detected.\n");
-		} else if (rev == 0x59 || rev == 0x61) {
+		} else if (rev == 0x51 || rev == 0x59 || rev == 0x61) {
 			RZN32BM = mmio_readb(sb600_spibar + 0x50) & 0x1;
 			amd_gen = CHIPSET_YANGTZE;
 			msg_pdbg("Ryzen detected.\n");
