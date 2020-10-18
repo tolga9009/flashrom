@@ -361,7 +361,7 @@ static int spi_prepare_address(struct flashctx *const flash, uint8_t cmd_buf[],
 			       const bool native_4ba, const unsigned int addr)
 {
 	if (native_4ba || flash->in_4ba_mode) {
-		if (!spi_master_4ba(flash)) {
+		if (!spi_master_4ba(flash) && RZN32BM != 1) {
 			msg_cwarn("4-byte address requested but master can't handle 4-byte addresses.\n");
 			return -1;
 		}

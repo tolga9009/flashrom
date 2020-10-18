@@ -124,6 +124,8 @@ enum programmer {
 	PROGRAMMER_INVALID /* This must always be the last entry. */
 };
 
+extern uint8_t RZN32BM;
+
 enum programmer_type {
 	PCI = 1, /* to detect uninitialized values */
 	USB,
